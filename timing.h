@@ -80,16 +80,15 @@ namespace gss{
 
 	void Timing::start(){
 		_timers.push_back(ClockNode(++_timer_size, clock()));
-		++_cur_index;
 		gss::cout << "\n" << _name << "(" << _timer_size << ")启动\n";
 	}
 
 	void Timing::end(){
-		if (_cur_index == 0 || _cur_index > _timer_size)
+		if (_cur_index < 0 || _cur_index >= _timer_size)
 			return;
-		_timers.at(_cur_index - 1).set_result(clock() - _timers.at(_cur_index - 1).get_clock());
-		gss::cout << "\n" << _name << "(" << _timer_size << ")---用时" << _timers.at(_cur_index-1).get_result() << "ms\n";
-		--_cur_index;
+		_timers.at(_cur_index).set_result(clock() - _timers.at(_cur_index).get_clock());
+		gss::cout << _name << "(" << _timer_size << ")---用时" << _timers.at(_cur_index).get_result() << "ms\n";
+		++_cur_index;
 	}
 
 

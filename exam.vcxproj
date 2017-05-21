@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -76,8 +77,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="auto_install_trojan.cpp" />
     <ClCompile Include="double_CPU.cpp" />
+    <ClCompile Include="downloader.cpp" />
+    <ClCompile Include="inject.cpp" />
     <ClCompile Include="investor.cpp" />
+    <ClCompile Include="keyboard_hook.cpp" />
+    <ClCompile Include="mini_trojan.cpp" />
+    <ClCompile Include="registry_operator.cpp" />
     <ClCompile Include="relation_dim.cpp" />
     <ClCompile Include="adjustment_queue.cpp" />
     <ClCompile Include="remove_duplicate.cpp" />
@@ -88,13 +95,21 @@
     <ClCompile Include="dot_asterisk_pattern.cpp" />
     <ClCompile Include="first_single_letter.cpp" />
     <ClCompile Include="Gcd.h" />
+    <ClCompile Include="shutdown.cpp" />
+    <ClCompile Include="simple_tcp_server.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="svchost_trojan.cpp" />
+    <ClCompile Include="testDll.cpp" />
     <ClCompile Include="ugly_number.cpp" />
     <ClCompile Include="texi_or_walk.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="Fibonacci.h" />
+    <ClInclude Include="FloodAttack.h" />
     <ClInclude Include="Heap.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="StringMatcher.h" />
     <ClInclude Include="timing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
