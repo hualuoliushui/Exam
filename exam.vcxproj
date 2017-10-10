@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -78,12 +78,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="auto_install_trojan.cpp" />
+    <ClCompile Include="control_cpu.cpp" />
+    <ClCompile Include="double_binary.cpp" />
     <ClCompile Include="double_CPU.cpp" />
     <ClCompile Include="downloader.cpp" />
     <ClCompile Include="inject.cpp" />
     <ClCompile Include="investor.cpp" />
     <ClCompile Include="keyboard_hook.cpp" />
     <ClCompile Include="mini_trojan.cpp" />
+    <ClCompile Include="package.cpp" />
     <ClCompile Include="registry_operator.cpp" />
     <ClCompile Include="relation_dim.cpp" />
     <ClCompile Include="adjustment_queue.cpp" />
@@ -97,20 +100,47 @@
     <ClCompile Include="Gcd.h" />
     <ClCompile Include="shutdown.cpp" />
     <ClCompile Include="simple_tcp_server.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="humdrum_queue.cpp" />
+    <ClCompile Include="test1.cpp" />
     <ClCompile Include="svchost_trojan.cpp" />
+    <ClCompile Include="TestAny.cpp" />
+    <ClCompile Include="TestAOP.cpp" />
     <ClCompile Include="testDll.cpp" />
+    <ClCompile Include="TestEvents.cpp" />
+    <ClCompile Include="TestIoC.cpp" />
+    <ClCompile Include="TestThreadPool.cpp" />
+    <ClCompile Include="TestVisitor.cpp" />
+    <ClCompile Include="test_kd.cpp" />
     <ClCompile Include="ugly_number.cpp" />
     <ClCompile Include="texi_or_walk.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Any.hpp" />
+    <ClInclude Include="AOP.hpp" />
+    <ClInclude Include="CommonCommand.hpp" />
     <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="Events.hpp" />
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="FloodAttack.h" />
+    <ClInclude Include="function_traits.hpp" />
     <ClInclude Include="Heap.h" />
+    <ClInclude Include="IoCContainer.hpp" />
+    <ClInclude Include="KDTree.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MessageBus.hpp" />
+    <ClInclude Include="NonCopyable.hpp" />
+    <ClInclude Include="ObjectPool.hpp" />
+    <ClInclude Include="Ones_in_Binary.h" />
+    <ClInclude Include="Range.hpp" />
+    <ClInclude Include="Singleton.hpp" />
     <ClInclude Include="StringMatcher.h" />
+    <ClInclude Include="SyncQueue.hpp" />
+    <ClInclude Include="TestString.h" />
+    <ClInclude Include="ThreadPool.hpp" />
+    <ClInclude Include="Timer.hpp" />
     <ClInclude Include="timing.h" />
+    <ClInclude Include="Visitor.hpp" />
+    <ClInclude Include="Wrap.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

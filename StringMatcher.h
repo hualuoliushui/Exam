@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string.h>
 namespace gss
 {
 #define STRINGMATCHER_M_TABLE_SIZE 256
@@ -18,7 +18,7 @@ namespace gss
 		virtual int run(){ return -1; };
 	public:
 		StringMatcher()
-			:m_ptr_pattern(NULL), m_ptr_text(NULL) {};
+			:m_ptr_pattern(nullptr), m_ptr_text(nullptr) {};
 		~StringMatcher(){};
 
 		virtual const char* getName()
@@ -27,7 +27,7 @@ namespace gss
 		}
 		// 查找匹配，成功返回首次匹配的首字母下标，失败返回-1
 		virtual int matching(const char* pattern, const char* text) final{
-			if (pattern == NULL || text == NULL)
+			if (pattern == nullptr || text == nullptr)
 				return -1;
 			m_ptr_pattern = pattern;
 			m_ptr_text = text;
@@ -86,7 +86,7 @@ namespace gss
 		}
 	public:
 		KMPMatcher()
-			:m_nextTable(NULL){}
+			:m_nextTable(nullptr){}
 		~KMPMatcher()
 		{
 			delete[] m_nextTable;
@@ -142,7 +142,7 @@ namespace gss
 		}
 	public:
 		HorspoolMatcher()
-			:m_badSymbolTable(NULL){};
+			:m_badSymbolTable(nullptr){};
 		~HorspoolMatcher()
 		{
 			delete[] m_badSymbolTable;
@@ -225,7 +225,7 @@ namespace gss
 		}
 	public:
 		BoyerMooreMatcher()
-			:m_badSymbolTable(NULL), m_goodSuffixTable(NULL){};
+			:m_badSymbolTable(nullptr), m_goodSuffixTable(nullptr){};
 		~BoyerMooreMatcher()
 		{
 			delete[] m_badSymbolTable;
@@ -289,7 +289,7 @@ namespace gss
 		}
 	public:
 		SundayMatcher()
-			:m_stepTable(NULL){};
+			:m_stepTable(nullptr){};
 		~SundayMatcher()
 		{
 			delete[] m_stepTable;

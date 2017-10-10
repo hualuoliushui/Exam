@@ -33,6 +33,7 @@ bool gss_shutdown()
 	}
 	// 强制关机不向进程发送 WM_QUERYENDSESSION 消息
 	ExitWindowsEx(EWX_FORCE, 0);
+	return true;
 }
 
 #ifdef SHUTDOWN_MAIN
